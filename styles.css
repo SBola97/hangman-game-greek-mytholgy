@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css?family=Rubik+Scribble");
+*{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #351F39;
+}
+h1{
+    font-family: 'Rubik Scribble';
+    text-align: center;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+.container{
+    background-color: #F5E8C7;
+    width: 850px;
+    gap: 50px;
+    padding: 40px 50px;
+    border-radius: 10px;
+}
+.hangman-box{
+    text-align: center;
+}
+.hangman-box img{
+    max-width: 250px;
+}
+
+.hangman-box .marcador b{
+    color: red;
+}
+.word-displayer{
+    display:flex;
+    justify-content: center;
+    list-style: none;
+    gap: 10px;
+}
+.word-displayer .letter{
+    width: 25px;
+    font-size: 1.5rem;
+    margin: 25px 0px;
+    text-align: center;
+    border-bottom: 3px solid black;
+}
+.word-displayer .letter.guessed{
+    border-color: transparent;
+    margin: 10px 0px;
+}
+
+.game-box .teclado{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: center;
+}
+
+.game-box h4{
+    text-align: center;
+    font-style: italic;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color:red;
+}
+
+.game-box h4>b{
+    color: black;
+}
+
+.teclado button{
+    font-size: 1rem;
+    background-color: #8FD6E1;
+    border-radius: 10px;
+    width: calc(100%/9 - 5px);
+    cursor: pointer;
+}
+.teclado button:hover{
+    background-color: #4477CE;
+}
+.teclado button[disabled], button:disabled{
+    opacity: 0.8;
+}
+
+.game-modal{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    opacity: 0;
+    z-index: 999;
+    pointer-events: none;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: opacity 1s ease-out;
+}
+
+.game-modal.show{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.game-modal .content-modal{
+    text-align: center;
+    background-color: #F5E8C7;
+    width: 100%;
+    max-width: 420px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.game-modal h4{
+    text-transform: uppercase;
+    color: red;
+    font-weight: bold;
+    font-size: 1.7rem;
+}
+.game-modal p{
+    text-transform: uppercase;
+    font-size: 1.1rem;
+}
+.game-modal b{
+    color: #4477CE;
+}
+.game-modal img{
+    max-width: 250px;
+    border-radius: 10px;
+}
+
+.play-again{
+    padding: 12px;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #C7F2A4;
+}
+
+.play-again:hover{
+    background-color:#82CD47;
+}
+
+@media (max-width:480px) {
+
+    .container h1{
+        font-size: 1.6rem;
+    }
+    .container h2{
+        font-size: 1.2rem;
+    }
+
+    .word-displayer{
+        gap:5px;
+    }
+    .word-displayer .letter{
+        width: 15px;
+        font-size: 1.2rem;
+    }
+    .game-box h4{
+        font-size: 0.9rem;
+    }
+
+    .game-modal .content-modal{
+        max-width: 300px;
+    }
+        
+    .game-modal h4{
+        font-size: 1.2rem;
+    }
+    .content-modal p{
+        font-size: 0.9rem;
+    }
+
+}

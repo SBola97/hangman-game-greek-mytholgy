@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman game: Greek mythology</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts/wordBank.js" defer></script>
+    <script src="scripts/script.js" defer></script>
+</head>
+<body>
+    <div class="game-modal">
+        <div class="content-modal">
+            <img src="imgs/lost.gif" alt="gif-resultado">
+            <h4>Ganaste/Perdiste</h4>
+            <p>La palabra correcta era: <b>dsa</b></p>
+            <button class="play-again">Jugar de nuevo</button>
+        </div>
+    </div>
+    <div class="container">
+        <h1>Hangman game: Greek version</h1>
+        <div class="hangman-box">
+            <img src="/imgs/hangman-0.svg" alt="hangman-img">
+            <h2 class="marcador">Vidas restantes:
+                <b></b>
+            </h2>
+        </div>
+        <div class="game-box">
+            <div class="teclado"></div>
+            <ul class="word-displayer">
+            </ul>
+            <h4 class="pista">Pista:
+                <b>Lorem ipsum dolor sit amet consectetur adipisicing elit.</b>
+            </h4>
+        </div>
+    </div>
+</body>
+</html>
